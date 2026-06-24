@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+html {
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background-color: rgb(15, 15, 34);
+}
+.introduccio {
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* ← si no caben en fila, se apilan */
+    gap: 40px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1; /* ← ocupa el espacio disponible */
+    min-width: 250px; /* ← mínimo antes de apilarse */
+}
+
+.fotoperfil {
+    width: min(400px, 80vw); /* ← máximo 400px, pero nunca más del 80% de la pantalla */
+    height: min(400px, 80vw);
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fotoperfil:hover {
+    transform: scale(1.1);
+}
+.socialLogo {
+    width: 36px;
+    height: 36px;
+}
